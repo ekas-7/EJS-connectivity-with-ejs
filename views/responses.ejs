@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <!-- <style>
+        table {
+            border: 2px solid black;
+        }
+        td {
+            border: 1px solid black; 
+        }
+        th {
+            border: 1px solid black;  
+        }
+    </style> -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>All Posts</h1>
+        <h2><a href="http://localhost:3030/">HOME</a></h2>
+        <h2><a href="http://localhost:3030/posts/new">Add a new post</a></h2>
+    </div>
+    
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Delete</th>
+            <th>Edit</th>
+        </tr>
+        <% for(let i = 0; i < entries.length; i++) { %>
+            <tr>
+                <td><%= entries[i].id %></td>
+                <td><%= entries[i].username %></td>
+                <td><%= entries[i].email %></td>
+                <td><%= entries[i].password %></td>
+                <td>
+                    <form action="/delete/<%= entries[i].id %>" method="post">
+                        <button>Delete</button>
+                    </form>
+                </td>
+                <td>
+                    <a href="/edit/<%= entries[i].id %>">Edit</a>
+                </td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>
