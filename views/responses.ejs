@@ -29,7 +29,7 @@
             <th>Id</th>
             <th>Username</th>
             <th>Email</th>
-            <th>Password</th>
+            <!-- <th>Password</th> -->
             <th>Delete</th>
             <th>Edit</th>
         </tr>
@@ -38,7 +38,7 @@
                 <td><%= entries[i].id %></td>
                 <td><%= entries[i].username %></td>
                 <td><%= entries[i].email %></td>
-                <td><%= entries[i].password %></td>
+                <!-- <td><%= entries[i].password %></td> -->
                 <td>
                     <form action="/delete/<%= entries[i].id %>" method="post">
                         <button>Delete</button>
