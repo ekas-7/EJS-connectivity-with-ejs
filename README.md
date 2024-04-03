@@ -25,6 +25,7 @@ Before getting started, make sure you have the following prerequisites in place:
    ```bash
    npm install
    ```
+3. Replace DATABASE with database name and PASSWORD with database password
 
 
 
